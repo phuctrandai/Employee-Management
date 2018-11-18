@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Employee_Management.Bo;
 using Employee_Management.Model;
 using MetroFramework.Forms;
+using MetroFramework.Animation;
 
 namespace Employee_Management.View
 {
@@ -32,5 +33,12 @@ namespace Employee_Management.View
             lbxChucVu.DisplayMember = "TenChucVu";
             lbxChucVu.ValueMember = "MaChucVu";
         }
+
+        private void btnThemNhanSu_Click(object sender, EventArgs e)
+        {
+            FrmThemNhanSu frmThemNhanSu = new FrmThemNhanSu();
+            frmThemNhanSu.Show();
+        }
+
     }
 }

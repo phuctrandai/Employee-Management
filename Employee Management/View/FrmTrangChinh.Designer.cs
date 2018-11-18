@@ -462,6 +462,7 @@
             this.btnThemNhanSu.TabIndex = 3;
             this.btnThemNhanSu.Text = "Bổ sung nhân sự";
             this.btnThemNhanSu.UseSelectable = true;
+            this.btnThemNhanSu.Click += new System.EventHandler(this.btnThemNhanSu_Click);
             // 
             // tbpCapNhatKhenThuong
             // 

@@ -65,6 +65,9 @@
             this.nudHeSoLuong = new System.Windows.Forms.NumericUpDown();
             this.btnBoSung = new MetroFramework.Controls.MetroButton();
             this.btnHuy = new MetroFramework.Controls.MetroButton();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,10 +86,10 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(20, 471);
+            this.metroPanel1.Location = new System.Drawing.Point(20, 484);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(862, 51);
-            this.metroPanel1.TabIndex = 0;
+            this.metroPanel1.Size = new System.Drawing.Size(981, 51);
+            this.metroPanel1.TabIndex = 3;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
@@ -99,11 +102,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 411);
+            this.panel1.Size = new System.Drawing.Size(981, 424);
             this.panel1.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.metroLabel17);
+            this.groupBox1.Controls.Add(this.metroLabel16);
             this.groupBox1.Controls.Add(this.nudNamSinh);
             this.groupBox1.Controls.Add(this.cbxTonGiao);
             this.groupBox1.Controls.Add(this.cbxDanToc);
@@ -123,7 +128,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(862, 183);
+            this.groupBox1.Size = new System.Drawing.Size(981, 189);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -139,26 +144,27 @@
             this.groupBox3.Controls.Add(this.metroLabel13);
             this.groupBox3.Controls.Add(this.metroLabel14);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 260);
+            this.groupBox3.Location = new System.Drawing.Point(0, 273);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(862, 151);
+            this.groupBox3.Size = new System.Drawing.Size(981, 151);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin công việc";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.metroLabel18);
             this.groupBox2.Controls.Add(this.tbxEmail);
             this.groupBox2.Controls.Add(this.metroLabel9);
-            this.groupBox2.Controls.Add(this.tbxSoDienThoai);
-            this.groupBox2.Controls.Add(this.metroLabel8);
             this.groupBox2.Controls.Add(this.tbxDiaChi);
             this.groupBox2.Controls.Add(this.metroLabel7);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 183);
+            this.groupBox2.Controls.Add(this.tbxSoDienThoai);
+            this.groupBox2.Controls.Add(this.metroLabel8);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 195);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(862, 77);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.Size = new System.Drawing.Size(981, 78);
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin liên hệ";
             // 
@@ -173,11 +179,13 @@
             // 
             // tbxHoTen
             // 
+            this.tbxHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
             this.tbxHoTen.CustomButton.Image = null;
-            this.tbxHoTen.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.tbxHoTen.CustomButton.Location = new System.Drawing.Point(194, 1);
             this.tbxHoTen.CustomButton.Name = "";
             this.tbxHoTen.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.tbxHoTen.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -185,8 +193,10 @@
             this.tbxHoTen.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbxHoTen.CustomButton.UseSelectable = true;
             this.tbxHoTen.CustomButton.Visible = false;
+            this.tbxHoTen.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.tbxHoTen.Lines = new string[0];
             this.tbxHoTen.Location = new System.Drawing.Point(106, 24);
+            this.tbxHoTen.MaximumSize = new System.Drawing.Size(300, 29);
             this.tbxHoTen.MaxLength = 32767;
             this.tbxHoTen.Name = "tbxHoTen";
             this.tbxHoTen.PasswordChar = '\0';
@@ -195,8 +205,8 @@
             this.tbxHoTen.SelectionLength = 0;
             this.tbxHoTen.SelectionStart = 0;
             this.tbxHoTen.ShortcutsEnabled = true;
-            this.tbxHoTen.Size = new System.Drawing.Size(180, 29);
-            this.tbxHoTen.TabIndex = 1;
+            this.tbxHoTen.Size = new System.Drawing.Size(265, 29);
+            this.tbxHoTen.TabIndex = 0;
             this.tbxHoTen.UseSelectable = true;
             this.tbxHoTen.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxHoTen.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -212,23 +222,23 @@
             // 
             // cbxGioiTinh
             // 
+            this.cbxGioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxGioiTinh.FormattingEnabled = true;
             this.cbxGioiTinh.ItemHeight = 23;
-            this.cbxGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Khác"});
             this.cbxGioiTinh.Location = new System.Drawing.Point(106, 69);
+            this.cbxGioiTinh.MaximumSize = new System.Drawing.Size(300, 0);
             this.cbxGioiTinh.Name = "cbxGioiTinh";
-            this.cbxGioiTinh.Size = new System.Drawing.Size(180, 29);
-            this.cbxGioiTinh.TabIndex = 2;
+            this.cbxGioiTinh.Size = new System.Drawing.Size(265, 29);
+            this.cbxGioiTinh.TabIndex = 1;
             this.cbxGioiTinh.UseSelectable = true;
             // 
             // metroLabel3
             // 
-            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(338, 28);
+            this.metroLabel3.Location = new System.Drawing.Point(416, 30);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(67, 19);
             this.metroLabel3.TabIndex = 0;
@@ -236,9 +246,10 @@
             // 
             // nudNamSinh
             // 
-            this.nudNamSinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nudNamSinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nudNamSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nudNamSinh.Location = new System.Drawing.Point(430, 28);
+            this.nudNamSinh.Location = new System.Drawing.Point(511, 29);
             this.nudNamSinh.Maximum = new decimal(new int[] {
             2990,
             0,
@@ -250,7 +261,7 @@
             0,
             0});
             this.nudNamSinh.Name = "nudNamSinh";
-            this.nudNamSinh.Size = new System.Drawing.Size(73, 24);
+            this.nudNamSinh.Size = new System.Drawing.Size(122, 24);
             this.nudNamSinh.TabIndex = 3;
             this.nudNamSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudNamSinh.Value = new decimal(new int[] {
@@ -261,9 +272,10 @@
             // 
             // metroLabel4
             // 
-            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.metroLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(335, 73);
+            this.metroLabel4.Location = new System.Drawing.Point(416, 74);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(59, 19);
             this.metroLabel4.TabIndex = 0;
@@ -271,7 +283,8 @@
             // 
             // tbxNoiSinh
             // 
-            this.tbxNoiSinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbxNoiSinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -284,8 +297,10 @@
             this.tbxNoiSinh.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbxNoiSinh.CustomButton.UseSelectable = true;
             this.tbxNoiSinh.CustomButton.Visible = false;
+            this.tbxNoiSinh.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.tbxNoiSinh.Lines = new string[0];
-            this.tbxNoiSinh.Location = new System.Drawing.Point(430, 69);
+            this.tbxNoiSinh.Location = new System.Drawing.Point(511, 69);
+            this.tbxNoiSinh.MaximumSize = new System.Drawing.Size(240, 29);
             this.tbxNoiSinh.MaxLength = 32767;
             this.tbxNoiSinh.Name = "tbxNoiSinh";
             this.tbxNoiSinh.PasswordChar = '\0';
@@ -294,8 +309,8 @@
             this.tbxNoiSinh.SelectionLength = 0;
             this.tbxNoiSinh.SelectionStart = 0;
             this.tbxNoiSinh.ShortcutsEnabled = true;
-            this.tbxNoiSinh.Size = new System.Drawing.Size(167, 29);
-            this.tbxNoiSinh.TabIndex = 1;
+            this.tbxNoiSinh.Size = new System.Drawing.Size(209, 29);
+            this.tbxNoiSinh.TabIndex = 4;
             this.tbxNoiSinh.UseSelectable = true;
             this.tbxNoiSinh.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxNoiSinh.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -304,7 +319,7 @@
             // 
             this.metroLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(335, 130);
+            this.metroLabel5.Location = new System.Drawing.Point(416, 130);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(70, 19);
             this.metroLabel5.TabIndex = 0;
@@ -325,8 +340,9 @@
             this.tbxQueQuan.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbxQueQuan.CustomButton.UseSelectable = true;
             this.tbxQueQuan.CustomButton.Visible = false;
+            this.tbxQueQuan.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.tbxQueQuan.Lines = new string[0];
-            this.tbxQueQuan.Location = new System.Drawing.Point(430, 126);
+            this.tbxQueQuan.Location = new System.Drawing.Point(511, 126);
             this.tbxQueQuan.MaxLength = 32767;
             this.tbxQueQuan.Name = "tbxQueQuan";
             this.tbxQueQuan.PasswordChar = '\0';
@@ -335,15 +351,14 @@
             this.tbxQueQuan.SelectionLength = 0;
             this.tbxQueQuan.SelectionStart = 0;
             this.tbxQueQuan.ShortcutsEnabled = true;
-            this.tbxQueQuan.Size = new System.Drawing.Size(167, 29);
-            this.tbxQueQuan.TabIndex = 1;
+            this.tbxQueQuan.Size = new System.Drawing.Size(209, 29);
+            this.tbxQueQuan.TabIndex = 5;
             this.tbxQueQuan.UseSelectable = true;
             this.tbxQueQuan.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxQueQuan.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel6
             // 
-            this.metroLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(6, 130);
             this.metroLabel6.Name = "metroLabel6";
@@ -353,12 +368,13 @@
             // 
             // tbxSoCMND
             // 
-            this.tbxSoCMND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxSoCMND.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
             this.tbxSoCMND.CustomButton.Image = null;
-            this.tbxSoCMND.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.tbxSoCMND.CustomButton.Location = new System.Drawing.Point(194, 1);
             this.tbxSoCMND.CustomButton.Name = "";
             this.tbxSoCMND.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.tbxSoCMND.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -366,8 +382,10 @@
             this.tbxSoCMND.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbxSoCMND.CustomButton.UseSelectable = true;
             this.tbxSoCMND.CustomButton.Visible = false;
+            this.tbxSoCMND.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.tbxSoCMND.Lines = new string[0];
             this.tbxSoCMND.Location = new System.Drawing.Point(106, 126);
+            this.tbxSoCMND.MaximumSize = new System.Drawing.Size(300, 29);
             this.tbxSoCMND.MaxLength = 32767;
             this.tbxSoCMND.Name = "tbxSoCMND";
             this.tbxSoCMND.PasswordChar = '\0';
@@ -376,8 +394,8 @@
             this.tbxSoCMND.SelectionLength = 0;
             this.tbxSoCMND.SelectionStart = 0;
             this.tbxSoCMND.ShortcutsEnabled = true;
-            this.tbxSoCMND.Size = new System.Drawing.Size(180, 29);
-            this.tbxSoCMND.TabIndex = 1;
+            this.tbxSoCMND.Size = new System.Drawing.Size(265, 29);
+            this.tbxSoCMND.TabIndex = 2;
             this.tbxSoCMND.UseSelectable = true;
             this.tbxSoCMND.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxSoCMND.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -393,11 +411,13 @@
             // 
             // tbxDiaChi
             // 
+            this.tbxDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
             this.tbxDiaChi.CustomButton.Image = null;
-            this.tbxDiaChi.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.tbxDiaChi.CustomButton.Location = new System.Drawing.Point(194, 1);
             this.tbxDiaChi.CustomButton.Name = "";
             this.tbxDiaChi.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.tbxDiaChi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -405,6 +425,7 @@
             this.tbxDiaChi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbxDiaChi.CustomButton.UseSelectable = true;
             this.tbxDiaChi.CustomButton.Visible = false;
+            this.tbxDiaChi.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.tbxDiaChi.Lines = new string[0];
             this.tbxDiaChi.Location = new System.Drawing.Point(106, 29);
             this.tbxDiaChi.MaxLength = 32767;
@@ -415,16 +436,17 @@
             this.tbxDiaChi.SelectionLength = 0;
             this.tbxDiaChi.SelectionStart = 0;
             this.tbxDiaChi.ShortcutsEnabled = true;
-            this.tbxDiaChi.Size = new System.Drawing.Size(180, 29);
-            this.tbxDiaChi.TabIndex = 1;
+            this.tbxDiaChi.Size = new System.Drawing.Size(265, 29);
+            this.tbxDiaChi.TabIndex = 8;
             this.tbxDiaChi.UseSelectable = true;
             this.tbxDiaChi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxDiaChi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel8
             // 
+            this.metroLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(335, 33);
+            this.metroLabel8.Location = new System.Drawing.Point(416, 33);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(89, 19);
             this.metroLabel8.TabIndex = 0;
@@ -432,6 +454,7 @@
             // 
             // tbxSoDienThoai
             // 
+            this.tbxSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -444,8 +467,9 @@
             this.tbxSoDienThoai.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbxSoDienThoai.CustomButton.UseSelectable = true;
             this.tbxSoDienThoai.CustomButton.Visible = false;
+            this.tbxSoDienThoai.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.tbxSoDienThoai.Lines = new string[0];
-            this.tbxSoDienThoai.Location = new System.Drawing.Point(430, 29);
+            this.tbxSoDienThoai.Location = new System.Drawing.Point(511, 29);
             this.tbxSoDienThoai.MaxLength = 32767;
             this.tbxSoDienThoai.Name = "tbxSoDienThoai";
             this.tbxSoDienThoai.PasswordChar = '\0';
@@ -454,16 +478,17 @@
             this.tbxSoDienThoai.SelectionLength = 0;
             this.tbxSoDienThoai.SelectionStart = 0;
             this.tbxSoDienThoai.ShortcutsEnabled = true;
-            this.tbxSoDienThoai.Size = new System.Drawing.Size(167, 29);
-            this.tbxSoDienThoai.TabIndex = 1;
+            this.tbxSoDienThoai.Size = new System.Drawing.Size(209, 29);
+            this.tbxSoDienThoai.TabIndex = 9;
             this.tbxSoDienThoai.UseSelectable = true;
             this.tbxSoDienThoai.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxSoDienThoai.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel9
             // 
+            this.metroLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(648, 35);
+            this.metroLabel9.Location = new System.Drawing.Point(738, 33);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(44, 19);
             this.metroLabel9.TabIndex = 0;
@@ -471,6 +496,7 @@
             // 
             // tbxEmail
             // 
+            this.tbxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -483,8 +509,9 @@
             this.tbxEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbxEmail.CustomButton.UseSelectable = true;
             this.tbxEmail.CustomButton.Visible = false;
+            this.tbxEmail.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.tbxEmail.Lines = new string[0];
-            this.tbxEmail.Location = new System.Drawing.Point(716, 29);
+            this.tbxEmail.Location = new System.Drawing.Point(799, 29);
             this.tbxEmail.MaxLength = 32767;
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.PasswordChar = '\0';
@@ -493,16 +520,17 @@
             this.tbxEmail.SelectionLength = 0;
             this.tbxEmail.SelectionStart = 0;
             this.tbxEmail.ShortcutsEnabled = true;
-            this.tbxEmail.Size = new System.Drawing.Size(140, 29);
-            this.tbxEmail.TabIndex = 1;
+            this.tbxEmail.Size = new System.Drawing.Size(176, 29);
+            this.tbxEmail.TabIndex = 10;
             this.tbxEmail.UseSelectable = true;
             this.tbxEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel11
             // 
+            this.metroLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(648, 74);
+            this.metroLabel11.Location = new System.Drawing.Point(738, 74);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(57, 19);
             this.metroLabel11.TabIndex = 0;
@@ -510,22 +538,24 @@
             // 
             // cbxDanToc
             // 
+            this.cbxDanToc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxDanToc.FormattingEnabled = true;
             this.cbxDanToc.ItemHeight = 23;
             this.cbxDanToc.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
             "Khác"});
-            this.cbxDanToc.Location = new System.Drawing.Point(716, 73);
+            this.cbxDanToc.Location = new System.Drawing.Point(799, 73);
             this.cbxDanToc.Name = "cbxDanToc";
-            this.cbxDanToc.Size = new System.Drawing.Size(140, 29);
-            this.cbxDanToc.TabIndex = 2;
+            this.cbxDanToc.Size = new System.Drawing.Size(176, 29);
+            this.cbxDanToc.TabIndex = 7;
             this.cbxDanToc.UseSelectable = true;
             // 
             // metroLabel12
             // 
+            this.metroLabel12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(648, 29);
+            this.metroLabel12.Location = new System.Drawing.Point(738, 29);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(62, 19);
             this.metroLabel12.TabIndex = 0;
@@ -533,16 +563,17 @@
             // 
             // cbxTonGiao
             // 
+            this.cbxTonGiao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxTonGiao.FormattingEnabled = true;
             this.cbxTonGiao.ItemHeight = 23;
             this.cbxTonGiao.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
             "Khác"});
-            this.cbxTonGiao.Location = new System.Drawing.Point(716, 24);
+            this.cbxTonGiao.Location = new System.Drawing.Point(799, 24);
             this.cbxTonGiao.Name = "cbxTonGiao";
-            this.cbxTonGiao.Size = new System.Drawing.Size(140, 29);
-            this.cbxTonGiao.TabIndex = 2;
+            this.cbxTonGiao.Size = new System.Drawing.Size(176, 29);
+            this.cbxTonGiao.TabIndex = 6;
             this.cbxTonGiao.UseSelectable = true;
             // 
             // metroLabel10
@@ -560,7 +591,7 @@
             this.dtNgayVaoLam.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtNgayVaoLam.Name = "dtNgayVaoLam";
             this.dtNgayVaoLam.Size = new System.Drawing.Size(232, 29);
-            this.dtNgayVaoLam.TabIndex = 1;
+            this.dtNgayVaoLam.TabIndex = 11;
             // 
             // metroLabel13
             // 
@@ -578,14 +609,14 @@
             this.cbxChucVu.Location = new System.Drawing.Point(106, 84);
             this.cbxChucVu.Name = "cbxChucVu";
             this.cbxChucVu.Size = new System.Drawing.Size(232, 29);
-            this.cbxChucVu.TabIndex = 2;
+            this.cbxChucVu.TabIndex = 12;
             this.cbxChucVu.UseSelectable = true;
             // 
             // metroLabel14
             // 
             this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(504, 39);
+            this.metroLabel14.Location = new System.Drawing.Point(411, 43);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(93, 19);
             this.metroLabel14.TabIndex = 0;
@@ -600,7 +631,7 @@
             0,
             0,
             0});
-            this.nudLuongCoBan.Location = new System.Drawing.Point(620, 39);
+            this.nudLuongCoBan.Location = new System.Drawing.Point(511, 42);
             this.nudLuongCoBan.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -613,7 +644,7 @@
             0});
             this.nudLuongCoBan.Name = "nudLuongCoBan";
             this.nudLuongCoBan.Size = new System.Drawing.Size(236, 24);
-            this.nudLuongCoBan.TabIndex = 3;
+            this.nudLuongCoBan.TabIndex = 13;
             this.nudLuongCoBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudLuongCoBan.ThousandsSeparator = true;
             this.nudLuongCoBan.Value = new decimal(new int[] {
@@ -626,7 +657,7 @@
             // 
             this.metroLabel15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(504, 84);
+            this.metroLabel15.Location = new System.Drawing.Point(411, 88);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(83, 19);
             this.metroLabel15.TabIndex = 0;
@@ -642,7 +673,7 @@
             0,
             0,
             65536});
-            this.nudHeSoLuong.Location = new System.Drawing.Point(620, 84);
+            this.nudHeSoLuong.Location = new System.Drawing.Point(511, 88);
             this.nudHeSoLuong.Maximum = new decimal(new int[] {
             10,
             0,
@@ -655,7 +686,7 @@
             0});
             this.nudHeSoLuong.Name = "nudHeSoLuong";
             this.nudHeSoLuong.Size = new System.Drawing.Size(236, 24);
-            this.nudHeSoLuong.TabIndex = 3;
+            this.nudHeSoLuong.TabIndex = 14;
             this.nudHeSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudHeSoLuong.Value = new decimal(new int[] {
             1,
@@ -665,30 +696,72 @@
             // 
             // btnBoSung
             // 
-            this.btnBoSung.Location = new System.Drawing.Point(665, 3);
+            this.btnBoSung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBoSung.Highlight = true;
+            this.btnBoSung.Location = new System.Drawing.Point(790, 3);
             this.btnBoSung.Name = "btnBoSung";
             this.btnBoSung.Size = new System.Drawing.Size(191, 45);
-            this.btnBoSung.TabIndex = 2;
+            this.btnBoSung.TabIndex = 15;
             this.btnBoSung.Text = "Bổ sung";
             this.btnBoSung.UseSelectable = true;
+            this.btnBoSung.Click += new System.EventHandler(this.btnBoSung_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(504, 3);
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.Location = new System.Drawing.Point(623, 3);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(103, 45);
-            this.btnHuy.TabIndex = 2;
+            this.btnHuy.TabIndex = 16;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseSelectable = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel16.Location = new System.Drawing.Point(371, 29);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(15, 19);
+            this.metroLabel16.TabIndex = 8;
+            this.metroLabel16.Text = "*";
+            this.metroLabel16.UseCustomForeColor = true;
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel17.Location = new System.Drawing.Point(371, 130);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(15, 19);
+            this.metroLabel17.TabIndex = 8;
+            this.metroLabel17.Text = "*";
+            this.metroLabel17.UseCustomForeColor = true;
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel18.Location = new System.Drawing.Point(719, 33);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(15, 19);
+            this.metroLabel18.TabIndex = 8;
+            this.metroLabel18.Text = "*";
+            this.metroLabel18.UseCustomForeColor = true;
             // 
             // FrmThemNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 542);
+            this.ClientSize = new System.Drawing.Size(1021, 555);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroPanel1);
+            this.MaximumSize = new System.Drawing.Size(1021, 555);
+            this.MinimumSize = new System.Drawing.Size(1021, 555);
             this.Name = "FrmThemNhanSu";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Text = "Bổ sung nhân sự";
             this.Load += new System.EventHandler(this.FrmThemNhanSu_Load);
             this.metroPanel1.ResumeLayout(false);
@@ -745,5 +818,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroButton btnHuy;
         private MetroFramework.Controls.MetroButton btnBoSung;
+        private MetroFramework.Controls.MetroLabel metroLabel18;
+        private MetroFramework.Controls.MetroLabel metroLabel17;
+        private MetroFramework.Controls.MetroLabel metroLabel16;
     }
 }

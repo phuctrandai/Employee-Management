@@ -934,8 +934,6 @@ namespace Employee_Management.Model
 		
 		private System.Nullable<long> _TienThuong;
 		
-		private System.Nullable<double> _HeSoPhuCap;
-		
 		private System.Nullable<long> _TienPhat;
 		
 		private EntitySet<NhanVien> _NhanViens;
@@ -952,8 +950,6 @@ namespace Employee_Management.Model
     partial void OnHeSoLuongChanged();
     partial void OnTienThuongChanging(System.Nullable<long> value);
     partial void OnTienThuongChanged();
-    partial void OnHeSoPhuCapChanging(System.Nullable<double> value);
-    partial void OnHeSoPhuCapChanged();
     partial void OnTienPhatChanging(System.Nullable<long> value);
     partial void OnTienPhatChanged();
     #endregion
@@ -1040,26 +1036,6 @@ namespace Employee_Management.Model
 					this._TienThuong = value;
 					this.SendPropertyChanged("TienThuong");
 					this.OnTienThuongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HeSoPhuCap", DbType="Float")]
-		public System.Nullable<double> HeSoPhuCap
-		{
-			get
-			{
-				return this._HeSoPhuCap;
-			}
-			set
-			{
-				if ((this._HeSoPhuCap != value))
-				{
-					this.OnHeSoPhuCapChanging(value);
-					this.SendPropertyChanging();
-					this._HeSoPhuCap = value;
-					this.SendPropertyChanged("HeSoPhuCap");
-					this.OnHeSoPhuCapChanged();
 				}
 			}
 		}
@@ -1164,8 +1140,6 @@ namespace Employee_Management.Model
 		
 		private System.Nullable<int> _MaTonGiao;
 		
-		private System.Nullable<int> _MaPhongBan;
-		
 		private System.Nullable<int> _MaChucVu;
 		
 		private System.Nullable<int> _MaSoLuong;
@@ -1214,8 +1188,6 @@ namespace Employee_Management.Model
     partial void OnMaDanTocChanged();
     partial void OnMaTonGiaoChanging(System.Nullable<int> value);
     partial void OnMaTonGiaoChanged();
-    partial void OnMaPhongBanChanging(System.Nullable<int> value);
-    partial void OnMaPhongBanChanged();
     partial void OnMaChucVuChanging(System.Nullable<int> value);
     partial void OnMaChucVuChanged();
     partial void OnMaSoLuongChanging(System.Nullable<int> value);
@@ -1517,26 +1489,6 @@ namespace Employee_Management.Model
 					this._MaTonGiao = value;
 					this.SendPropertyChanged("MaTonGiao");
 					this.OnMaTonGiaoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhongBan", DbType="Int")]
-		public System.Nullable<int> MaPhongBan
-		{
-			get
-			{
-				return this._MaPhongBan;
-			}
-			set
-			{
-				if ((this._MaPhongBan != value))
-				{
-					this.OnMaPhongBanChanging(value);
-					this.SendPropertyChanging();
-					this._MaPhongBan = value;
-					this.SendPropertyChanged("MaPhongBan");
-					this.OnMaPhongBanChanged();
 				}
 			}
 		}

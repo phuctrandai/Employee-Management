@@ -52,7 +52,6 @@
       <Column Name="LuongCoBan" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="HeSoLuong" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="TienThuong" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="HeSoPhuCap" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="TienPhat" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Association Name="Luong_NhanVien" Member="NhanViens" ThisKey="MaSoLuong" OtherKey="MaSoLuong" Type="NhanVien" />
     </Type>
@@ -73,7 +72,6 @@
       <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MaDanToc" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaTonGiao" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaPhongBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaChucVu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaSoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NhanVien_ChamCong" Member="ChamCongs" ThisKey="IdNhanVien" OtherKey="IdNhanVien" Type="ChamCong" />

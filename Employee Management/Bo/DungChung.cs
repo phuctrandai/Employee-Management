@@ -16,8 +16,12 @@ namespace Employee_Management.Bo
         private string matKhau;
         private string connectionString;
         private static DungChung instance;
-        
-        public DungChung() { }
+
+        public DungChung()
+        {
+            tenDatabase = @".\sqlexpress"; tenDatabase = @"QLNhanSu";
+            this.connectionString = @"Data Source=.\" + TenServer + ";Initial Catalog=" + TenDatabase + ";Integrated Security=True";
+        }
 
         public string TenServer { get => tenServer; set => tenServer = value; }
         public string TenDatabase { get => tenDatabase; set => tenDatabase = value; }
@@ -31,14 +35,14 @@ namespace Employee_Management.Bo
 
         public void updateConnectionString()
         {
-            this.connectionString = @"Data Source=.\" + TenServer + ";Initial Catalog="+ TenDatabase +";Integrated Security=True";
+            this.connectionString = @"Data Source=.\" + TenServer + ";Initial Catalog=" + TenDatabase + ";Integrated Security=True";
         }
 
         public List<String> GetAllDatabaseName()
         {
             List<String> list = null;
 
-            string conectionString = @"Data Source=.\"+ tenServer + ";Initial Catalog=master;Integrated Security=True";
+            string conectionString = @"Data Source=.\" + tenServer + ";Initial Catalog=master;Integrated Security=True";
             SqlConnection connection = new SqlConnection(conectionString);
             connection.Open();
 
@@ -47,7 +51,7 @@ namespace Employee_Management.Bo
                 list = new List<string>();
                 SqlCommand command = new SqlCommand("select * from sys.databases", connection);
                 SqlDataReader reader = command.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     list.Add(reader["name"].ToString());
                 }
