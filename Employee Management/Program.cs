@@ -17,7 +17,7 @@ namespace Employee_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTrangChinh());
+            Application.Run(new FrmThemNhanSu());
         }
     }
 }

@@ -125,6 +125,7 @@
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseSelectable = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnThoat
             // 
@@ -134,15 +135,17 @@
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseSelectable = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnCauHinh
             // 
             this.btnCauHinh.Location = new System.Drawing.Point(23, 239);
             this.btnCauHinh.Name = "btnCauHinh";
             this.btnCauHinh.Size = new System.Drawing.Size(64, 38);
-            this.btnCauHinh.TabIndex = 2;
+            this.btnCauHinh.TabIndex = 4;
             this.btnCauHinh.Text = "Cấu hình";
             this.btnCauHinh.UseSelectable = true;
+            this.btnCauHinh.Click += new System.EventHandler(this.btnCauHinh_Click);
             // 
             // lbHuongDan
             // 
@@ -151,7 +154,7 @@
             this.lbHuongDan.ForeColor = System.Drawing.Color.Black;
             this.lbHuongDan.Location = new System.Drawing.Point(100, 177);
             this.lbHuongDan.Name = "lbHuongDan";
-            this.lbHuongDan.Size = new System.Drawing.Size(331, 38);
+            this.lbHuongDan.Size = new System.Drawing.Size(276, 30);
             this.lbHuongDan.TabIndex = 1;
             this.lbHuongDan.Text = "Nếu có bất kỳ lỗi gì liên quan đến kết nối cơ sở dữ liệu,\r\nbạn có thể chọn \'Cấu h" +
     "ình\' để  chỉnh sửa kết nối.";
@@ -159,6 +162,7 @@
             // 
             // FrmDangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 300);

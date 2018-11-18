@@ -48,9 +48,6 @@ namespace Employee_Management.Model
     partial void InsertNhanVien(NhanVien instance);
     partial void UpdateNhanVien(NhanVien instance);
     partial void DeleteNhanVien(NhanVien instance);
-    partial void InsertPhongBan(PhongBan instance);
-    partial void UpdatePhongBan(PhongBan instance);
-    partial void DeletePhongBan(PhongBan instance);
     partial void InsertTaiKhoan(TaiKhoan instance);
     partial void UpdateTaiKhoan(TaiKhoan instance);
     partial void DeleteTaiKhoan(TaiKhoan instance);
@@ -142,14 +139,6 @@ namespace Employee_Management.Model
 			get
 			{
 				return this.GetTable<NhanVien>();
-			}
-		}
-		
-		public System.Data.Linq.Table<PhongBan> PhongBans
-		{
-			get
-			{
-				return this.GetTable<PhongBan>();
 			}
 		}
 		
@@ -317,8 +306,6 @@ namespace Employee_Management.Model
 		
 		private System.Nullable<System.DateTime> _NgayKyLuat;
 		
-		private string _SoQuyetDinh;
-		
 		private string _LyDo;
 		
 		private string _MucDoViPham;
@@ -335,8 +322,6 @@ namespace Employee_Management.Model
     partial void OnIdNhanVienChanged();
     partial void OnNgayKyLuatChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayKyLuatChanged();
-    partial void OnSoQuyetDinhChanging(string value);
-    partial void OnSoQuyetDinhChanged();
     partial void OnLyDoChanging(string value);
     partial void OnLyDoChanged();
     partial void OnMucDoViPhamChanging(string value);
@@ -409,26 +394,6 @@ namespace Employee_Management.Model
 					this._NgayKyLuat = value;
 					this.SendPropertyChanged("NgayKyLuat");
 					this.OnNgayKyLuatChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoQuyetDinh", DbType="VarChar(50)")]
-		public string SoQuyetDinh
-		{
-			get
-			{
-				return this._SoQuyetDinh;
-			}
-			set
-			{
-				if ((this._SoQuyetDinh != value))
-				{
-					this.OnSoQuyetDinhChanging(value);
-					this.SendPropertyChanging();
-					this._SoQuyetDinh = value;
-					this.SendPropertyChanged("SoQuyetDinh");
-					this.OnSoQuyetDinhChanged();
 				}
 			}
 		}
@@ -768,8 +733,6 @@ namespace Employee_Management.Model
 		
 		private System.Nullable<System.DateTime> _NgayKhenThuong;
 		
-		private string _SoQuyetDinh;
-		
 		private string _LyDo;
 		
 		private string _MucDoKhenThuong;
@@ -786,8 +749,6 @@ namespace Employee_Management.Model
     partial void OnIdNhanVienChanged();
     partial void OnNgayKhenThuongChanging(System.Nullable<System.DateTime> value);
     partial void OnNgayKhenThuongChanged();
-    partial void OnSoQuyetDinhChanging(string value);
-    partial void OnSoQuyetDinhChanged();
     partial void OnLyDoChanging(string value);
     partial void OnLyDoChanged();
     partial void OnMucDoKhenThuongChanging(string value);
@@ -860,26 +821,6 @@ namespace Employee_Management.Model
 					this._NgayKhenThuong = value;
 					this.SendPropertyChanged("NgayKhenThuong");
 					this.OnNgayKhenThuongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoQuyetDinh", DbType="VarChar(50)")]
-		public string SoQuyetDinh
-		{
-			get
-			{
-				return this._SoQuyetDinh;
-			}
-			set
-			{
-				if ((this._SoQuyetDinh != value))
-				{
-					this.OnSoQuyetDinhChanging(value);
-					this.SendPropertyChanging();
-					this._SoQuyetDinh = value;
-					this.SendPropertyChanged("SoQuyetDinh");
-					this.OnSoQuyetDinhChanged();
 				}
 			}
 		}
@@ -1239,8 +1180,6 @@ namespace Employee_Management.Model
 		
 		private EntityRef<Luong> _Luong;
 		
-		private EntityRef<PhongBan> _PhongBan;
-		
 		private EntityRef<TonGiao> _TonGiao;
 		
     #region Extensibility Method Definitions
@@ -1290,7 +1229,6 @@ namespace Employee_Management.Model
 			this._ChucVu = default(EntityRef<ChucVu>);
 			this._DanToc = default(EntityRef<DanToc>);
 			this._Luong = default(EntityRef<Luong>);
-			this._PhongBan = default(EntityRef<PhongBan>);
 			this._TonGiao = default(EntityRef<TonGiao>);
 			OnCreated();
 		}
@@ -1594,10 +1532,6 @@ namespace Employee_Management.Model
 			{
 				if ((this._MaPhongBan != value))
 				{
-					if (this._PhongBan.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMaPhongBanChanging(value);
 					this.SendPropertyChanging();
 					this._MaPhongBan = value;
@@ -1783,40 +1717,6 @@ namespace Employee_Management.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhongBan_NhanVien", Storage="_PhongBan", ThisKey="MaPhongBan", OtherKey="MaPhongBan", IsForeignKey=true)]
-		public PhongBan PhongBan
-		{
-			get
-			{
-				return this._PhongBan.Entity;
-			}
-			set
-			{
-				PhongBan previousValue = this._PhongBan.Entity;
-				if (((previousValue != value) 
-							|| (this._PhongBan.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PhongBan.Entity = null;
-						previousValue.NhanViens.Remove(this);
-					}
-					this._PhongBan.Entity = value;
-					if ((value != null))
-					{
-						value.NhanViens.Add(this);
-						this._MaPhongBan = value.MaPhongBan;
-					}
-					else
-					{
-						this._MaPhongBan = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("PhongBan");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TonGiao_NhanVien", Storage="_TonGiao", ThisKey="MaTonGiao", OtherKey="MaTonGiao", IsForeignKey=true)]
 		public TonGiao TonGiao
 		{
@@ -1893,168 +1793,6 @@ namespace Employee_Management.Model
 		{
 			this.SendPropertyChanging();
 			entity.NhanVien = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PhongBan")]
-	public partial class PhongBan : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MaPhongBan;
-		
-		private string _TenPhongBan;
-		
-		private string _DiaChi;
-		
-		private string _SoDienThoai;
-		
-		private EntitySet<NhanVien> _NhanViens;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaPhongBanChanging(int value);
-    partial void OnMaPhongBanChanged();
-    partial void OnTenPhongBanChanging(string value);
-    partial void OnTenPhongBanChanged();
-    partial void OnDiaChiChanging(string value);
-    partial void OnDiaChiChanged();
-    partial void OnSoDienThoaiChanging(string value);
-    partial void OnSoDienThoaiChanged();
-    #endregion
-		
-		public PhongBan()
-		{
-			this._NhanViens = new EntitySet<NhanVien>(new Action<NhanVien>(this.attach_NhanViens), new Action<NhanVien>(this.detach_NhanViens));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhongBan", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MaPhongBan
-		{
-			get
-			{
-				return this._MaPhongBan;
-			}
-			set
-			{
-				if ((this._MaPhongBan != value))
-				{
-					this.OnMaPhongBanChanging(value);
-					this.SendPropertyChanging();
-					this._MaPhongBan = value;
-					this.SendPropertyChanged("MaPhongBan");
-					this.OnMaPhongBanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenPhongBan", DbType="NVarChar(50)")]
-		public string TenPhongBan
-		{
-			get
-			{
-				return this._TenPhongBan;
-			}
-			set
-			{
-				if ((this._TenPhongBan != value))
-				{
-					this.OnTenPhongBanChanging(value);
-					this.SendPropertyChanging();
-					this._TenPhongBan = value;
-					this.SendPropertyChanged("TenPhongBan");
-					this.OnTenPhongBanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(50)")]
-		public string DiaChi
-		{
-			get
-			{
-				return this._DiaChi;
-			}
-			set
-			{
-				if ((this._DiaChi != value))
-				{
-					this.OnDiaChiChanging(value);
-					this.SendPropertyChanging();
-					this._DiaChi = value;
-					this.SendPropertyChanged("DiaChi");
-					this.OnDiaChiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="VarChar(12)")]
-		public string SoDienThoai
-		{
-			get
-			{
-				return this._SoDienThoai;
-			}
-			set
-			{
-				if ((this._SoDienThoai != value))
-				{
-					this.OnSoDienThoaiChanging(value);
-					this.SendPropertyChanging();
-					this._SoDienThoai = value;
-					this.SendPropertyChanged("SoDienThoai");
-					this.OnSoDienThoaiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhongBan_NhanVien", Storage="_NhanViens", ThisKey="MaPhongBan", OtherKey="MaPhongBan")]
-		public EntitySet<NhanVien> NhanViens
-		{
-			get
-			{
-				return this._NhanViens;
-			}
-			set
-			{
-				this._NhanViens.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_NhanViens(NhanVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.PhongBan = this;
-		}
-		
-		private void detach_NhanViens(NhanVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.PhongBan = null;
 		}
 	}
 	

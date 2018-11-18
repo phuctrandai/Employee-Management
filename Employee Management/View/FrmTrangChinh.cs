@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Employee_Management.Bo;
+using Employee_Management.Model;
 using MetroFramework.Forms;
 
 namespace Employee_Management.View
@@ -21,6 +23,14 @@ namespace Employee_Management.View
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void FrmTrangChinh_Load(object sender, EventArgs e)
+        {
+            List<ChucVu> chucVus = ChucVuBo.Instance.GetChucVus();
+            lbxChucVu.DataSource = chucVus;
+            lbxChucVu.DisplayMember = "TenChucVu";
+            lbxChucVu.ValueMember = "MaChucVu";
         }
     }
 }

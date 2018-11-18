@@ -162,6 +162,7 @@
             this.cbxTenDatabase.Size = new System.Drawing.Size(211, 29);
             this.cbxTenDatabase.TabIndex = 3;
             this.cbxTenDatabase.UseSelectable = true;
+            this.cbxTenDatabase.DropDown += new System.EventHandler(this.cbxTenDatabase_DropDown);
             // 
             // btnKetNoi
             // 
@@ -171,6 +172,7 @@
             this.btnKetNoi.TabIndex = 4;
             this.btnKetNoi.Text = "Kết nối";
             this.btnKetNoi.UseSelectable = true;
+            this.btnKetNoi.Click += new System.EventHandler(this.btnKetNoi_Click);
             // 
             // btnThoat
             // 
@@ -180,9 +182,11 @@
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseSelectable = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FrmKetNoiDatabase
             // 
+            this.AcceptButton = this.btnKetNoi;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 300);
@@ -202,6 +206,7 @@
             this.Name = "FrmKetNoiDatabase";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Text = "Kết nối cơ sở dữ liệu";
+            this.Load += new System.EventHandler(this.FrmKetNoiDatabase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
