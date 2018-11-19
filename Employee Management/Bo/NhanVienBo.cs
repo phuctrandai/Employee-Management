@@ -20,6 +20,15 @@ namespace Employee_Management.Bo
             get { if (instance == null) instance = new NhanVienBo(); return instance; }
         }
 
+        public List<View_NhanVienTheoChucVu> GetNhanViensTheoChucVu(int maChucVu, int trangHienTai, int soDong)
+        {
+            List<View_NhanVienTheoChucVu> nhanViens = null;
+            int totalRow = trangHienTai * soDong,
+                skipRow = (trangHienTai - 1) * soDong;
+            nhanViens = dataContext.View_NhanVienTheoChucVus.Where(nv => nv.MaChucVu.Equals(maChucVu)).Take(totalRow).Skip(skipRow).ToList();
+            return nhanViens;
+        }
+
         public void AddNhanVien(Dictionary<string, object> info)
         {
             string  hoTen = info["hoTen"].ToString(),
@@ -71,6 +80,11 @@ namespace Employee_Management.Bo
             dataContext.Luongs.InsertOnSubmit(luong);
             dataContext.NhanViens.InsertOnSubmit(nhanVien);
             dataContext.SubmitChanges();
+        }
+        
+        public int TongNhanVienTheoChucVu(int maChucVu)
+        {
+            return dataContext.NhanViens.Where(nv => nv.MaChucVu.Equals(maChucVu)).Count();
         }
     }
 }
